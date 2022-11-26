@@ -22,3 +22,10 @@ sudo mv composer.phar /usr/local/bin/composer
 
 ![](composer-V.png)
 
+# BedRock
+
+```
+composer create-project roots/bedrock
+```
+
+![](bedrock-test.png)
