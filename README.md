@@ -65,3 +65,9 @@ FLUSH PRIVILEGES;
 ```
 
 ![](bedrock-mysql.png)
+
+# BedRock is Ready!
+
+![](2023.png)
+
+![](mindblown.png)
