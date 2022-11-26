@@ -22,10 +22,35 @@ sudo mv composer.phar /usr/local/bin/composer
 
 ![](composer-V.png)
 
-# BedRock
+# BedRock create-project
 
 ```
 composer create-project roots/bedrock
 ```
 
 ![](bedrock-test.png)
+
+# Create a Virtual Host
+
+```
+<VirtualHost *:80>
+    ServerName bedrock.test
+    ServerAlias www.bedrock.test 
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/bedrock.test
+    ErrorLog /var/www/bedrock.test/error.log
+    CustomLog /var/www/bedrock.test/access.log combined
+</VirtualHost>
+<Directory /var/www/bedrockwp.test/>
+	AllowOverride All
+</Directory>
+```
+
+## Enable the site
+
+```
+sudo a2ensite bedrock.test.conf
+sudo systemctl reload apache2
+```
+
+Add the new host to `/etc/hosts` file.
