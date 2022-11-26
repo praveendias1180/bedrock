@@ -54,3 +54,14 @@ sudo systemctl reload apache2
 ```
 
 Add the new host to `/etc/hosts` file.
+
+# Add MySQL User and DB
+
+```
+CREATE DATABASE bedrock DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE USER 'bedrockuser'@'%' IDENTIFIED WITH mysql_native_password BY 'ChangeThis';
+GRANT ALL ON bedrock.* TO 'bedrockuser'@'%';
+FLUSH PRIVILEGES;
+```
+
+![](bedrock-mysql.png)
